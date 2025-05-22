@@ -5,13 +5,13 @@ public class PlayerBulletBase : BulletBase
     [Header("g—p’†‚Ì‘®«’e")]
     public bool[] useElement;  //g—p‘®«’e
     [Header("Še‘®«’e‚Ì‰Î—Í")]
-    public int fire;
-    public int water;
-    public int wind;
-    public int explosion;
-    public int metal;
-    public int grass;
-    public int normal;
+    public float fire;
+    public float water;
+    public float wind;
+    public float explosion;
+    public float metal;
+    public float grass;
+    public float normal;
 
     public enum  Element
     {
@@ -43,36 +43,36 @@ public class PlayerBulletBase : BulletBase
             character = other.gameObject.GetComponent<CharacterBase>();
             if (useElement[(int)Element.FIRE])
             {
-                currentAttack = fire;
+                currentAttack = fire * character.fire;
                 character.isFire = true;
             }
             if (useElement[(int)Element.WATER])
             {
-                currentAttack = water;
+                currentAttack = water * character.water;
                 character.isWater = true;
             }
             if (useElement[(int)Element.WIND])
             {
-                currentAttack = wind;
+                currentAttack = wind * character.wind;
                 character.isWind = true;
             }
             if (useElement[(int)Element.EXPLOSION])
             {
-                currentAttack = explosion;
+                currentAttack = explosion * character.explosion;
             }
             if (useElement[(int)Element.METAL])
             {
-                currentAttack = metal;
+                currentAttack = metal * character.metal;
                 character.isMetal = true;
             }
             if (useElement[(int)Element.GRASS])
             {
-                currentAttack = grass;
+                currentAttack = grass * character.grass;
                 character.isGrass = true;
             }
             if (useElement[(int)Element.NORMAL])
             {
-                currentAttack = normal;
+                currentAttack = normal * character.normal;
             }
 
             character.currentHP -= currentAttack;

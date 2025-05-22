@@ -14,6 +14,8 @@ public class Environment : MonoBehaviour
     public float now_time;
     //環境変化の乱数格納用
     public int random_environment;
+    //変更しましたフラグ
+    public bool change;
 
 
     public Image image;
@@ -55,6 +57,7 @@ public class Environment : MonoBehaviour
 
         if (now_time >= change_time)
         {
+            change = true;
             random_environment = Random.Range(0, 100);
 
             //環境フラグを全てfalseにする（最初の環境をフラットにする）
@@ -76,6 +79,8 @@ public class Environment : MonoBehaviour
 
             //カウントをリセットする
             now_time = 0;
+            //変更完了
+            change = false;
         }
     }
 

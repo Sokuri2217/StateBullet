@@ -2,7 +2,7 @@ using UnityEngine;
 
 public class BulletBase : MonoBehaviour
 {
-    public int currentAttack;  //Œ»İ‚ÌUŒ‚—Í
+    public float currentAttack;  //Œ»İ‚ÌUŒ‚—Í
     public string BulletMaster;//’e‚Ì‚¿å‚Ìƒ^ƒO•Û‘¶
 
     public CharacterBase character;

@@ -56,6 +56,15 @@ public class CharacterBase : MonoBehaviour
     public bool isMetal; //金属
     public bool isGrass; //草
 
+    [Header("属性弾の倍率")]
+    public float fire;
+    public float water;
+    public float wind;
+    public float explosion;
+    public float metal;
+    public float grass;
+    public float normal;
+
     [Header("環境による変化")]
     public float downSpeed; //移動速度低下
     public float burnUp;    //燃焼割合増加
@@ -128,45 +137,48 @@ public class CharacterBase : MonoBehaviour
     //環境状態による変化を管理
     public void Environment()
     {
-        //豪雨(炎＆燃焼無効・常時水付着)
-        if (environment.rain)
+        if (environment.change)
         {
-            isWater = true;
-            isBurning = false;
-        }
-        //猛暑(カビ無効＆消滅)
-        if (environment.hot)
-        {
-            isMold = false;
-        }
-        //暴風(燃焼の割合増加・移動速度低下)
-        if (environment.storm)
-        {
-            burning *= burnUp;
-            moveSpeed *= downSpeed;
-        }
-        //高重力(金属体で移動不可)
-        if (environment.high_gravity)
-        {
-            if (isMetal)
-                moveSpeed = 0.0f;
-            else
-                moveSpeed = originalSpeed;
-        }
-        //低重力(風を受けると一定時間浮遊・金属体で無効化)
-        if (environment.low_gravity)
-        {
-            if (!isMetal)
+            //豪雨(炎＆燃焼無効・常時水付着)
+            if (environment.rain)
             {
-
+                isWater = true;
+                isBurning = false;
             }
-        }
-        //豊穣(活性化の割合増加・燃焼の持続延長)
-        if (environment.abundant)
-        {
-            active *= actiUp;
-            if (isBurning)
-                frequency += longBurn;
+            //猛暑(カビ無効＆消滅)
+            if (environment.hot)
+            {
+                isMold = false;
+            }
+            //暴風(燃焼の割合増加・移動速度低下)
+            if (environment.storm)
+            {
+                burning *= burnUp;
+                moveSpeed *= downSpeed;
+            }
+            //高重力(金属体で移動不可)
+            if (environment.high_gravity)
+            {
+                if (isMetal)
+                    moveSpeed = 0.0f;
+                else
+                    moveSpeed = originalSpeed;
+            }
+            //低重力(風を受けると一定時間浮遊・金属体で無効化)
+            if (environment.low_gravity)
+            {
+                if (!isMetal)
+                {
+
+                }
+            }
+            //豊穣(活性化の割合増加・燃焼の持続延長)
+            if (environment.abundant)
+            {
+                active *= actiUp;
+                if (isBurning)
+                    frequency += longBurn;
+            }
         }
     }
 

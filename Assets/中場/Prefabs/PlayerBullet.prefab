@@ -106,13 +106,13 @@ MonoBehaviour:
   bulletOwner: 
   environment: {fileID: 0}
   bulletPower:
-  - 1
-  - 1
-  - 1
-  - 1
-  - 1
-  - 1
-  - 1
+  - 20
+  - 25
+  - 25
+  - 25
+  - 25
+  - 10
+  - 30
   bulletEffect:
   - {fileID: 100006, guid: 28ccd38a41e256a4e8fea96f5a8d039d, type: 3}
   - {fileID: 123640, guid: 9242b15a276bc5a4babd09239e5fa709, type: 3}

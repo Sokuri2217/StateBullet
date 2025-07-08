@@ -105,8 +105,8 @@ MonoBehaviour:
   uIPlayer: {fileID: 0}
   isAcid: 0
   acidDamage: 0
-  acidLimit: 0
-  acidTimer: 0
+  acidLimit: 1
+  acidTimer: 1
   se: {fileID: 0}
   shotSe: {fileID: 8300000, guid: a33edcc3c8e194f4e9097a111be84fa3, type: 3}
   damageSe: {fileID: 8300000, guid: 452c0d254b98e4e4e8ad4dc3c526933f, type: 3}

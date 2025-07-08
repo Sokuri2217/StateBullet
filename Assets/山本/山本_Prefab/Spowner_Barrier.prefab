@@ -110,7 +110,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 352b223cc026c9e4793039a25015eebb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  hp: 1
+  hp: 5
   corePos: {fileID: 0}
   barrierMaterial:
   - {fileID: 2100000, guid: 27f1165e347dc594ab1c22d2225927b6, type: 2}

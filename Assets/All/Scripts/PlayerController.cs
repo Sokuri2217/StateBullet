@@ -21,6 +21,8 @@ public class PlayerController : CharacterBase
     public AudioClip shotSe;
     public AudioClip damageSe;
 
+    public UIStage uiStage; 
+
     //現在の属性弾プロパティ
     public int NowAttributeBullet
     {
@@ -53,20 +55,23 @@ public class PlayerController : CharacterBase
     {
         base.Update();//継承先の関数"Update"を実行する
 
-        if(objEnemySpowner == null)
+        if (!uiStage.isPause)  
         {
-            if (!uIPlayer.objUIGameClear.activeSelf)
+            if (objEnemySpowner == null)
             {
-                uIPlayer.SetUIGameClear();
-                CursorLock();
+                if (!uIPlayer.objUIGameClear.activeSelf)
+                {
+                    uIPlayer.SetUIGameClear();
+                    CursorLock();
+                }
             }
-        }
-        else
-        {
-            //体力が0より上の場合
-            if (NowHP > 0)
+            else
             {
-                Active();//関数"Active"を実行する
+                //体力が0より上の場合
+                if (NowHP > 0)
+                {
+                    Active();//関数"Active"を実行する
+                }
             }
         }
     }
@@ -77,7 +82,7 @@ public class PlayerController : CharacterBase
         base.HPManager(number);
         uIPlayer.SetUIHP(NowHP);
 
-        if (NowHP <= 0)
+        if (NowHP <= 0) 
         {
             CursorLock();
         }
@@ -92,8 +97,9 @@ public class PlayerController : CharacterBase
     //関数"Active"
     public void Active()
     {
-        // カーソルを画面中央にロックする
-        Cursor.lockState = CursorLockMode.Locked;
+        if (Time.timeScale == 0) 
+            Cursor.lockState = CursorLockMode.Locked; // カーソルを画面中央にロックする
+
         cameraController.MoveCamera();
         // 移動量の計算
         float horizontal = Input.GetAxis("Horizontal");//ADキー

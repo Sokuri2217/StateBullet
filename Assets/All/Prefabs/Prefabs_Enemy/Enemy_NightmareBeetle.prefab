@@ -8164,52 +8164,52 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   structStatus:
-    maxHP: 10
+    maxHP: 200
     moveSpeed: 8
   structPosition:
     maxHeight: 0
     safeHeight: 10
   attributeLimit:
-  - 30
-  - 30
-  - 30
-  - 30
-  - 30
+  - 10
+  - 10
+  - 10
+  - 10
+  - 10
   attributeDamage:
+  - 1
+  - 1.6
+  - 0.7
   - 0
-  - 0
-  - 0
-  - 0
-  - 0
-  - 0
-  - 0
+  - 1.4
+  - 1
+  - 1.4
   abnormalLimit:
-  - 0
-  - 0
-  - 0
-  - 0
+  - 30
+  - 30
+  - 30
+  - 30
   abnormalFrequency:
-  - 0
-  - 0
-  - 0
-  - 0
+  - 1
+  - 1
+  - 1
+  - 1
   abnormalRatio:
-  - 0
-  - 0
-  - 0
-  - 0
+  - 1
+  - 1.5
+  - 1
+  - 0.8
   environmentalChange:
-  - 0
-  - 0
-  - 0
-  - 0
+  - 1
+  - 1
+  - 1
+  - 1
   objBullet: {fileID: 4299454447238356841, guid: 3d5b0d8d960cb3847bdb54b99aecd15d, type: 3}
   objShotPosition: {fileID: 3972704878222804098}
   environment: {fileID: 0}
   uIBase: {fileID: 6956149705639428725}
   shotInterval: 0
   minInterval: 1
-  maxInterval: 5
+  maxInterval: 3
   isShooting: 0
   isDamage: 0
   spownerSetting: {fileID: 0}

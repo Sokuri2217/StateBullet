@@ -19,6 +19,7 @@ public class SceneButton : ButtonScale
 
     public void GameStart()
     {
+        Time.timeScale = 1;
         //ƒ{ƒ^ƒ“‚ð‰Ÿ‚µ‚½‚Æ‚«‚ÉSE‚ð–Â‚ç‚·
         se.PlayOneShot(selectClip);
         StartCoroutine(LoadScene());

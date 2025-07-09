@@ -1929,7 +1929,7 @@ MonoBehaviour:
   uIBase: {fileID: 3484761449239604912}
   shotInterval: 0
   minInterval: 2
-  maxInterval: 6
+  maxInterval: 4
   isShooting: 0
   isDamage: 0
   spownerSetting: {fileID: 0}

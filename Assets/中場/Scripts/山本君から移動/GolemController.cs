@@ -106,6 +106,7 @@ public class GolemController : EnemyBase
                     //攻撃アニメーションを再生
                     animator.SetTrigger("Shot");
                     //弾を発射
+                    Invoke("Shot", 0.3f);
                     break;
                 case (int)AttackMode.FIGHT:
                     //攻撃手段を近距離に設定

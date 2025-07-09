@@ -303,7 +303,7 @@ MonoBehaviour:
   - {fileID: 1987720806421918, guid: a2dfe588a42016e40892b72d31fd1cf6, type: 3}
   spownLimit: 5
   spownTimer: 0
-  maxSpown: 1
+  maxSpown: 20
   currentSpown: 0
   currentSpownUp: 1
   spownUp: 0.9

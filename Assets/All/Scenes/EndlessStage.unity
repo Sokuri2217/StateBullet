@@ -2154,7 +2154,6 @@ MonoBehaviour:
   pausePanel: {fileID: 1576369608}
   playUI: {fileID: 747341817}
   isPause: 0
-  pauseButton: {fileID: 0}
 --- !u!1 &1057577915
 GameObject:
   m_ObjectHideFlags: 0

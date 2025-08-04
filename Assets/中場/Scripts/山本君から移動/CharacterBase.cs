@@ -26,7 +26,7 @@ public class CharacterBase : MonoBehaviour
     public StructPosition structPosition;//座標
 
     //現在のステータス
-    protected float nowHP;       //現在のHP
+    public float nowHP;       //現在のHP
     protected float nowMoveSpeed;//現在の移動速度
     //現在の座標
     protected Vector3 position;//座標
@@ -194,7 +194,7 @@ public class CharacterBase : MonoBehaviour
     //関数"HPManager(体力情報)"
     public virtual void HPManager(float number)
     {
-        NowHP += number;//現在の体力から引数"number(数値)"を引く
+        NowHP -= number;//現在の体力から引数"number(数値)"を引く
     }
 
     //関数"Destroy(破壊)"
